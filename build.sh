@@ -1,3 +1,1 @@
-read -p "Enter your filename: " filename
-mkdir -p build
-gcc main.c -o build/main.o && ./build/main.o $"filename"
+gcc main.c -o main.o && ./main.o customers-10000.csv
