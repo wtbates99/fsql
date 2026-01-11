@@ -12,5 +12,5 @@ add_compile_options(-Wall -Wextra)
 set(CMAKE_CXX_FLAGS_RELEASE "${CMAKE_CXX_FLAGS_RELEASE} -O3 -march=native -flto")
 
 # Add executable
-add_executable(csv_reader csv_reader.cpp)
+add_executable(csv_reader.o csv_reader.cpp)
 
