@@ -92,6 +92,7 @@ csv_reader_o_EXTERNAL_OBJECTS =
 
 csv_reader.o: CMakeFiles/csv_reader.o.dir/csv_reader.cpp.o
 csv_reader.o: CMakeFiles/csv_reader.o.dir/build.make
+csv_reader.o: _deps/csv-build/include/internal/libcsv.a
 csv_reader.o: CMakeFiles/csv_reader.o.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/home/wtb/clones/fsql/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable csv_reader.o"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/csv_reader.o.dir/link.txt --verbose=$(VERBOSE)

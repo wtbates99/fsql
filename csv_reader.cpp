@@ -1,7 +1,7 @@
 #include <iostream>
 #include <fstream>
-#include <vector>
 #include <string>
+#include "csv.hpp"
 
 int main(int argc, char* argv[]) {
     if (argc < 2) { 
@@ -11,38 +11,17 @@ int main(int argc, char* argv[]) {
 
     std::ifstream file(argv[1]);
     if (!file.is_open()) { 
-        std::cerr << "Cannot open file\n"; 
+        std::cerr << "Cannot open file: " << argv[1] << "\n"; 
         return 1; 
     }
 
-    std::vector<std::vector<std::string>> matrix;
-    std::string line;
+    // CSVReader from csv.hpp
+    csv::CSVReader reader(argv[1]);
 
-    while (std::getline(file, line)) {
-        std::vector<std::string> row;
-        std::string field;
-        bool in_quotes = false;
-
-        for (size_t i = 0; i < line.size(); ++i) {
-            char c = line[i];
-            if (c == '"') {
-                in_quotes = !in_quotes; // toggle inside quotes
-            } else if (c == ',' && !in_quotes) {
-                row.push_back(field);
-                field.clear();
-            } else {
-                field += c;
-            }
+    for (csv::CSVRow& row : reader) {
+        for (csv::CSVField& field : row) {
+            std::cout << field.get<>() << " ";
         }
-        row.push_back(field); // last field
-        matrix.push_back(std::move(row));
-    }
-
-    file.close();
-
-    // Print first  rows to verify
-    for (size_t i = 0; i < std::min(matrix.size(), size_t(2)); ++i) {
-        for (auto& f : matrix[i]) std::cout << f << " | ";
         std::cout << "\n";
     }
 

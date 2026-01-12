@@ -1,3 +1,12 @@
 /home/wtb/clones/fsql/build/CMakeFiles/csv_reader.o.dir
 /home/wtb/clones/fsql/build/CMakeFiles/edit_cache.dir
 /home/wtb/clones/fsql/build/CMakeFiles/rebuild_cache.dir
+/home/wtb/clones/fsql/build/_deps/csv-build/CMakeFiles/edit_cache.dir
+/home/wtb/clones/fsql/build/_deps/csv-build/CMakeFiles/rebuild_cache.dir
+/home/wtb/clones/fsql/build/_deps/csv-build/include/internal/CMakeFiles/csv.dir
+/home/wtb/clones/fsql/build/_deps/csv-build/include/internal/CMakeFiles/edit_cache.dir
+/home/wtb/clones/fsql/build/_deps/csv-build/include/internal/CMakeFiles/rebuild_cache.dir
+/home/wtb/clones/fsql/build/_deps/csv-build/programs/CMakeFiles/csv_info.dir
+/home/wtb/clones/fsql/build/_deps/csv-build/programs/CMakeFiles/csv_stats.dir
+/home/wtb/clones/fsql/build/_deps/csv-build/programs/CMakeFiles/edit_cache.dir
+/home/wtb/clones/fsql/build/_deps/csv-build/programs/CMakeFiles/rebuild_cache.dir

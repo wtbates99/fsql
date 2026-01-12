@@ -1,1 +1,1 @@
-/usr/bin/c++ -O3 -DNDEBUG -O3 -march=native -flto CMakeFiles/csv_reader.o.dir/csv_reader.cpp.o -o csv_reader.o 
+/usr/bin/c++ -O3 -DNDEBUG -O3 -march=native -flto CMakeFiles/csv_reader.o.dir/csv_reader.cpp.o -o csv_reader.o  _deps/csv-build/include/internal/libcsv.a 

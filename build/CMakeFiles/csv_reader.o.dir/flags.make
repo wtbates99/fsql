@@ -4,7 +4,7 @@
 # compile CXX with /usr/bin/c++
 CXX_DEFINES = 
 
-CXX_INCLUDES = 
+CXX_INCLUDES = -I/home/wtb/clones/fsql/build/_deps/csv-src/single_include -I/home/wtb/clones/fsql/build/_deps/csv-src/include/internal/..
 
 CXX_FLAGS = -O3 -DNDEBUG -O3 -march=native -flto -std=gnu++17 -Wall -Wextra
 

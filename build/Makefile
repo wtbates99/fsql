@@ -129,6 +129,45 @@ csv_reader.o/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/csv_reader.o.dir/build.make CMakeFiles/csv_reader.o.dir/build
 .PHONY : csv_reader.o/fast
 
+#=============================================================================
+# Target rules for targets named csv
+
+# Build rule for target.
+csv: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 csv
+.PHONY : csv
+
+# fast build rule for target.
+csv/fast:
+	$(MAKE) $(MAKESILENT) -f _deps/csv-build/include/internal/CMakeFiles/csv.dir/build.make _deps/csv-build/include/internal/CMakeFiles/csv.dir/build
+.PHONY : csv/fast
+
+#=============================================================================
+# Target rules for targets named csv_info
+
+# Build rule for target.
+csv_info: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 csv_info
+.PHONY : csv_info
+
+# fast build rule for target.
+csv_info/fast:
+	$(MAKE) $(MAKESILENT) -f _deps/csv-build/programs/CMakeFiles/csv_info.dir/build.make _deps/csv-build/programs/CMakeFiles/csv_info.dir/build
+.PHONY : csv_info/fast
+
+#=============================================================================
+# Target rules for targets named csv_stats
+
+# Build rule for target.
+csv_stats: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 csv_stats
+.PHONY : csv_stats
+
+# fast build rule for target.
+csv_stats/fast:
+	$(MAKE) $(MAKESILENT) -f _deps/csv-build/programs/CMakeFiles/csv_stats.dir/build.make _deps/csv-build/programs/CMakeFiles/csv_stats.dir/build
+.PHONY : csv_stats/fast
+
 csv_reader.o: csv_reader.cpp.o
 .PHONY : csv_reader.o
 
@@ -161,7 +200,10 @@ help:
 	@echo "... depend"
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
+	@echo "... csv"
+	@echo "... csv_info"
 	@echo "... csv_reader.o"
+	@echo "... csv_stats"
 	@echo "... csv_reader.o"
 	@echo "... csv_reader.i"
 	@echo "... csv_reader.s"

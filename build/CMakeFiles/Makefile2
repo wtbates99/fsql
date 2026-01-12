@@ -64,29 +64,81 @@ CMAKE_BINARY_DIR = /home/wtb/clones/fsql/build
 
 # The main recursive "all" target.
 all: CMakeFiles/csv_reader.o.dir/all
+all: _deps/csv-build/all
 .PHONY : all
 
 # The main recursive "preinstall" target.
-preinstall:
+preinstall: _deps/csv-build/preinstall
 .PHONY : preinstall
 
 # The main recursive "clean" target.
 clean: CMakeFiles/csv_reader.o.dir/clean
+clean: _deps/csv-build/clean
 .PHONY : clean
+
+#=============================================================================
+# Directory level rules for directory _deps/csv-build
+
+# Recursive "all" directory target.
+_deps/csv-build/all: _deps/csv-build/include/internal/all
+_deps/csv-build/all: _deps/csv-build/programs/all
+.PHONY : _deps/csv-build/all
+
+# Recursive "preinstall" directory target.
+_deps/csv-build/preinstall: _deps/csv-build/include/internal/preinstall
+_deps/csv-build/preinstall: _deps/csv-build/programs/preinstall
+.PHONY : _deps/csv-build/preinstall
+
+# Recursive "clean" directory target.
+_deps/csv-build/clean: _deps/csv-build/include/internal/clean
+_deps/csv-build/clean: _deps/csv-build/programs/clean
+.PHONY : _deps/csv-build/clean
+
+#=============================================================================
+# Directory level rules for directory _deps/csv-build/include/internal
+
+# Recursive "all" directory target.
+_deps/csv-build/include/internal/all: _deps/csv-build/include/internal/CMakeFiles/csv.dir/all
+.PHONY : _deps/csv-build/include/internal/all
+
+# Recursive "preinstall" directory target.
+_deps/csv-build/include/internal/preinstall:
+.PHONY : _deps/csv-build/include/internal/preinstall
+
+# Recursive "clean" directory target.
+_deps/csv-build/include/internal/clean: _deps/csv-build/include/internal/CMakeFiles/csv.dir/clean
+.PHONY : _deps/csv-build/include/internal/clean
+
+#=============================================================================
+# Directory level rules for directory _deps/csv-build/programs
+
+# Recursive "all" directory target.
+_deps/csv-build/programs/all: _deps/csv-build/programs/CMakeFiles/csv_info.dir/all
+_deps/csv-build/programs/all: _deps/csv-build/programs/CMakeFiles/csv_stats.dir/all
+.PHONY : _deps/csv-build/programs/all
+
+# Recursive "preinstall" directory target.
+_deps/csv-build/programs/preinstall:
+.PHONY : _deps/csv-build/programs/preinstall
+
+# Recursive "clean" directory target.
+_deps/csv-build/programs/clean: _deps/csv-build/programs/CMakeFiles/csv_info.dir/clean
+_deps/csv-build/programs/clean: _deps/csv-build/programs/CMakeFiles/csv_stats.dir/clean
+.PHONY : _deps/csv-build/programs/clean
 
 #=============================================================================
 # Target rules for target CMakeFiles/csv_reader.o.dir
 
 # All Build rule for target.
-CMakeFiles/csv_reader.o.dir/all:
+CMakeFiles/csv_reader.o.dir/all: _deps/csv-build/include/internal/CMakeFiles/csv.dir/all
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/csv_reader.o.dir/build.make CMakeFiles/csv_reader.o.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/csv_reader.o.dir/build.make CMakeFiles/csv_reader.o.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/wtb/clones/fsql/build/CMakeFiles --progress-num=1,2 "Built target csv_reader.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/wtb/clones/fsql/build/CMakeFiles --progress-num=13,14 "Built target csv_reader.o"
 .PHONY : CMakeFiles/csv_reader.o.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/csv_reader.o.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/wtb/clones/fsql/build/CMakeFiles 2
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/wtb/clones/fsql/build/CMakeFiles 12
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/csv_reader.o.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/wtb/clones/fsql/build/CMakeFiles 0
 .PHONY : CMakeFiles/csv_reader.o.dir/rule
@@ -99,6 +151,84 @@ csv_reader.o: CMakeFiles/csv_reader.o.dir/rule
 CMakeFiles/csv_reader.o.dir/clean:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/csv_reader.o.dir/build.make CMakeFiles/csv_reader.o.dir/clean
 .PHONY : CMakeFiles/csv_reader.o.dir/clean
+
+#=============================================================================
+# Target rules for target _deps/csv-build/include/internal/CMakeFiles/csv.dir
+
+# All Build rule for target.
+_deps/csv-build/include/internal/CMakeFiles/csv.dir/all:
+	$(MAKE) $(MAKESILENT) -f _deps/csv-build/include/internal/CMakeFiles/csv.dir/build.make _deps/csv-build/include/internal/CMakeFiles/csv.dir/depend
+	$(MAKE) $(MAKESILENT) -f _deps/csv-build/include/internal/CMakeFiles/csv.dir/build.make _deps/csv-build/include/internal/CMakeFiles/csv.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/wtb/clones/fsql/build/CMakeFiles --progress-num=1,2,3,4,5,6,7,8,9,10 "Built target csv"
+.PHONY : _deps/csv-build/include/internal/CMakeFiles/csv.dir/all
+
+# Build rule for subdir invocation for target.
+_deps/csv-build/include/internal/CMakeFiles/csv.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/wtb/clones/fsql/build/CMakeFiles 10
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 _deps/csv-build/include/internal/CMakeFiles/csv.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/wtb/clones/fsql/build/CMakeFiles 0
+.PHONY : _deps/csv-build/include/internal/CMakeFiles/csv.dir/rule
+
+# Convenience name for target.
+csv: _deps/csv-build/include/internal/CMakeFiles/csv.dir/rule
+.PHONY : csv
+
+# clean rule for target.
+_deps/csv-build/include/internal/CMakeFiles/csv.dir/clean:
+	$(MAKE) $(MAKESILENT) -f _deps/csv-build/include/internal/CMakeFiles/csv.dir/build.make _deps/csv-build/include/internal/CMakeFiles/csv.dir/clean
+.PHONY : _deps/csv-build/include/internal/CMakeFiles/csv.dir/clean
+
+#=============================================================================
+# Target rules for target _deps/csv-build/programs/CMakeFiles/csv_info.dir
+
+# All Build rule for target.
+_deps/csv-build/programs/CMakeFiles/csv_info.dir/all: _deps/csv-build/include/internal/CMakeFiles/csv.dir/all
+	$(MAKE) $(MAKESILENT) -f _deps/csv-build/programs/CMakeFiles/csv_info.dir/build.make _deps/csv-build/programs/CMakeFiles/csv_info.dir/depend
+	$(MAKE) $(MAKESILENT) -f _deps/csv-build/programs/CMakeFiles/csv_info.dir/build.make _deps/csv-build/programs/CMakeFiles/csv_info.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/wtb/clones/fsql/build/CMakeFiles --progress-num=11,12 "Built target csv_info"
+.PHONY : _deps/csv-build/programs/CMakeFiles/csv_info.dir/all
+
+# Build rule for subdir invocation for target.
+_deps/csv-build/programs/CMakeFiles/csv_info.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/wtb/clones/fsql/build/CMakeFiles 12
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 _deps/csv-build/programs/CMakeFiles/csv_info.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/wtb/clones/fsql/build/CMakeFiles 0
+.PHONY : _deps/csv-build/programs/CMakeFiles/csv_info.dir/rule
+
+# Convenience name for target.
+csv_info: _deps/csv-build/programs/CMakeFiles/csv_info.dir/rule
+.PHONY : csv_info
+
+# clean rule for target.
+_deps/csv-build/programs/CMakeFiles/csv_info.dir/clean:
+	$(MAKE) $(MAKESILENT) -f _deps/csv-build/programs/CMakeFiles/csv_info.dir/build.make _deps/csv-build/programs/CMakeFiles/csv_info.dir/clean
+.PHONY : _deps/csv-build/programs/CMakeFiles/csv_info.dir/clean
+
+#=============================================================================
+# Target rules for target _deps/csv-build/programs/CMakeFiles/csv_stats.dir
+
+# All Build rule for target.
+_deps/csv-build/programs/CMakeFiles/csv_stats.dir/all: _deps/csv-build/include/internal/CMakeFiles/csv.dir/all
+	$(MAKE) $(MAKESILENT) -f _deps/csv-build/programs/CMakeFiles/csv_stats.dir/build.make _deps/csv-build/programs/CMakeFiles/csv_stats.dir/depend
+	$(MAKE) $(MAKESILENT) -f _deps/csv-build/programs/CMakeFiles/csv_stats.dir/build.make _deps/csv-build/programs/CMakeFiles/csv_stats.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/wtb/clones/fsql/build/CMakeFiles --progress-num=15,16 "Built target csv_stats"
+.PHONY : _deps/csv-build/programs/CMakeFiles/csv_stats.dir/all
+
+# Build rule for subdir invocation for target.
+_deps/csv-build/programs/CMakeFiles/csv_stats.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/wtb/clones/fsql/build/CMakeFiles 12
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 _deps/csv-build/programs/CMakeFiles/csv_stats.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/wtb/clones/fsql/build/CMakeFiles 0
+.PHONY : _deps/csv-build/programs/CMakeFiles/csv_stats.dir/rule
+
+# Convenience name for target.
+csv_stats: _deps/csv-build/programs/CMakeFiles/csv_stats.dir/rule
+.PHONY : csv_stats
+
+# clean rule for target.
+_deps/csv-build/programs/CMakeFiles/csv_stats.dir/clean:
+	$(MAKE) $(MAKESILENT) -f _deps/csv-build/programs/CMakeFiles/csv_stats.dir/build.make _deps/csv-build/programs/CMakeFiles/csv_stats.dir/clean
+.PHONY : _deps/csv-build/programs/CMakeFiles/csv_stats.dir/clean
 
 #=============================================================================
 # Special targets to cleanup operation of make.

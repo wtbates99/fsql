@@ -1,0 +1,46 @@
+{
+	"sources" : 
+	[
+		{
+			"file" : "/home/wtb/clones/fsql/build/_deps/csv-subbuild/CMakeFiles/csv-populate"
+		},
+		{
+			"file" : "/home/wtb/clones/fsql/build/_deps/csv-subbuild/CMakeFiles/csv-populate.rule"
+		},
+		{
+			"file" : "/home/wtb/clones/fsql/build/_deps/csv-subbuild/CMakeFiles/csv-populate-complete.rule"
+		},
+		{
+			"file" : "/home/wtb/clones/fsql/build/_deps/csv-subbuild/csv-populate-prefix/src/csv-populate-stamp/csv-populate-build.rule"
+		},
+		{
+			"file" : "/home/wtb/clones/fsql/build/_deps/csv-subbuild/csv-populate-prefix/src/csv-populate-stamp/csv-populate-configure.rule"
+		},
+		{
+			"file" : "/home/wtb/clones/fsql/build/_deps/csv-subbuild/csv-populate-prefix/src/csv-populate-stamp/csv-populate-download.rule"
+		},
+		{
+			"file" : "/home/wtb/clones/fsql/build/_deps/csv-subbuild/csv-populate-prefix/src/csv-populate-stamp/csv-populate-install.rule"
+		},
+		{
+			"file" : "/home/wtb/clones/fsql/build/_deps/csv-subbuild/csv-populate-prefix/src/csv-populate-stamp/csv-populate-mkdir.rule"
+		},
+		{
+			"file" : "/home/wtb/clones/fsql/build/_deps/csv-subbuild/csv-populate-prefix/src/csv-populate-stamp/csv-populate-patch.rule"
+		},
+		{
+			"file" : "/home/wtb/clones/fsql/build/_deps/csv-subbuild/csv-populate-prefix/src/csv-populate-stamp/csv-populate-test.rule"
+		},
+		{
+			"file" : "/home/wtb/clones/fsql/build/_deps/csv-subbuild/csv-populate-prefix/src/csv-populate-stamp/csv-populate-update.rule"
+		}
+	],
+	"target" : 
+	{
+		"labels" : 
+		[
+			"csv-populate"
+		],
+		"name" : "csv-populate"
+	}
+}
